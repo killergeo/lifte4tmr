@@ -16,7 +16,7 @@ function applyBrandConfig() {
 
   // Update all logos
   document.querySelectorAll('.logo').forEach(el => {
-    el.innerHTML = `<img src="images/logo_emblem.png?v=3" alt="${SITE_CONFIG.fullName}" class="logo-mark"><span class="logo-text"><span class="brand-base">${SITE_CONFIG.brandPrefix}</span><span class="slash">${SITE_CONFIG.brandName}</span></span>`;
+    el.innerHTML = `<img src="images/logo_emblem.png?v=4" alt="${SITE_CONFIG.fullName}" class="logo-mark"><span class="logo-text"><span class="brand-base">${SITE_CONFIG.brandPrefix}</span><span class="slash">${SITE_CONFIG.brandName}</span></span>`;
   });
 
   // Update hero micro
@@ -29,7 +29,7 @@ function applyBrandConfig() {
 
   // Update identity section
   const idMark = document.querySelector('.identity-mark');
-  if (idMark) idMark.innerHTML = `<img src="images/logo_badge.png?v=3" alt="${SITE_CONFIG.fullName}" class="identity-logo">`;
+  if (idMark) idMark.innerHTML = `<img src="images/logo_badge.png?v=4" alt="${SITE_CONFIG.fullName}" class="identity-logo">`;
   const idMicro = document.querySelector('.identity .micro');
   if (idMicro) idMicro.textContent = SITE_CONFIG.fullName;
 
@@ -430,10 +430,8 @@ window.addEventListener('scroll',()=>{
   $('#scroll-progress').style.width=(max>0?(window.scrollY/max)*100:0)+'%';
 },{passive:true});
 
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('on')});
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+// Make sure all reveal elements are immediately visible
+document.querySelectorAll('.reveal').forEach(el => el.classList.add('on'));
 
 const dayOfYear=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/86400000);
 applyBrandConfig();
@@ -441,4 +439,36 @@ setDaily(dayOfYear%workouts.length);
 render();
 initTimerEvents();
 initDietTabs();
+
+// Handle navigation clicks with perfect navbar offset
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const hash = a.getAttribute('href');
+    if (!hash || hash === '#') return;
+    if (hash === '#top') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      history.pushState(null, '', ' ');
+      return;
+    }
+    const target = document.querySelector(hash);
+    if (target) {
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.pageYOffset - 72;
+      window.scrollTo({ top, behavior: 'smooth' });
+      history.pushState(null, '', hash);
+    }
+  });
+});
+
+// Re-scroll on window load once all fonts and images are ready
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.pageYOffset - 72;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }
+});
 
