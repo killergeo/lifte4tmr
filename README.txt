@@ -1,27 +1,32 @@
-ANTI//TRAIN — DEPLOY-READY WEBSITE
+LIFTE4TMR — DEPLOY-READY WEBSITE (lifte4tmr.site)
 
-This is the custom non-generic fitness website build.
+This is the custom athletic training and coaching platform for Lifte4tmr.
 
 FILES
 - index.html
 - styles.css
 - script.js
 - images/
+  - logo_emblem.png
+  - logo_badge.png
+  - favicon.png
+  - coach/ (Jared's 1-on-1 coaching & physique results photos)
+  - workouts/ (Workout category backdrops)
+  - exercises/ (Movement cues & photos)
 
 WHAT IS BUILT
-- Custom ANTI//TRAIN identity
+- Custom LIFTE4TMR identity & athletic logo mark
+- "Work With Me / Get Fit Like This" 1-on-1 coaching section with Jared's physique gallery
+- Direct Instagram (@lifte4TmrLLC) and direct email (Jaredtesla75@gmail.com) integration
 - Full-screen changing workout photography while scrolling
-- 18 workout library entries
-- Goal filters
-- Level filters
-- Gym / home / anywhere filters
+- 18 workout library entries with step-by-step form cues & photos
+- Goal filters (Muscle, Strength, Conditioning, Mobility)
+- Level & Location filters (Gym / Home / Anywhere)
 - Muscle-group quick navigation
-- Workout detail popups with sets, reps, and rest
+- Workout detail popups with exercise photos, sets, reps, and rest
 - Daily random workout generator
 - 7-day training split
-- Responsive phone/tablet/desktop layout
-- Scroll progress and reveal animations
-- No framework required
+- Responsive mobile/tablet/desktop layout
 
 RUN IT LOCALLY
 Just open index.html in a browser.

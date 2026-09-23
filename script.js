@@ -16,7 +16,7 @@ function applyBrandConfig() {
 
   // Update all logos
   document.querySelectorAll('.logo').forEach(el => {
-    el.innerHTML = `<img src="images/logo.png" alt="${SITE_CONFIG.fullName}" class="logo-mark"><span class="logo-text"><span class="brand-base">${SITE_CONFIG.brandPrefix}</span><span class="slash">${SITE_CONFIG.brandName}</span></span>`;
+    el.innerHTML = `<img src="images/logo_emblem.png?v=3" alt="${SITE_CONFIG.fullName}" class="logo-mark"><span class="logo-text"><span class="brand-base">${SITE_CONFIG.brandPrefix}</span><span class="slash">${SITE_CONFIG.brandName}</span></span>`;
   });
 
   // Update hero micro
@@ -29,7 +29,7 @@ function applyBrandConfig() {
 
   // Update identity section
   const idMark = document.querySelector('.identity-mark');
-  if (idMark) idMark.innerHTML = `<img src="images/logo.png" alt="${SITE_CONFIG.fullName}" class="identity-logo">`;
+  if (idMark) idMark.innerHTML = `<img src="images/logo_badge.png?v=3" alt="${SITE_CONFIG.fullName}" class="identity-logo">`;
   const idMicro = document.querySelector('.identity .micro');
   if (idMicro) idMicro.textContent = SITE_CONFIG.fullName;
 
