@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080a0d">
+  <meta name="description" content="ANTI//TRAIN — workout library, training plans, and daily sessions.">
+  <title>ANTI//TRAIN</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress"><span id="scroll-progress"></span></div>
+
+  <header class="nav-shell">
+    <a class="logo" href="#top" aria-label="ANTI TRAIN home">
+      <span class="slash">A//</span><span>TRAIN</span>
+    </a>
+    <nav>
+      <a href="#choose">Train</a>
+      <a href="#library">Library</a>
+      <a href="#today">Today</a>
+      <a href="#split">7-Day Split</a>
+    </nav>
+    <a class="nav-cta" href="#library">START</a>
+  </header>
+
+  <main id="top">
+    <section class="hero visual-section" style="--photo:url('images/ropes.png')">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <div class="micro">ANTI//TRAIN • WORKOUT SYSTEM</div>
+          <h1>NO EXCUSES.<br><span>JUST REPS.</span></h1>
+          <p class="hero-lead">A workout-first platform built for people who want to open the site, pick a goal, and train.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#choose">CHOOSE YOUR WORKOUT</a>
+            <button class="outline-btn" id="random-top">SURPRISE ME</button>
+          </div>
+          <div class="hero-meta">
+            <div><strong>18</strong><span>starter workouts</span></div>
+            <div><strong>4</strong><span>training lanes</span></div>
+            <div><strong>0</strong><span>fluff</span></div>
+          </div>
+        </div>
+
+        <aside class="today-card reveal delay-1">
+          <span class="today-label">TODAY'S MOVE</span>
+          <h3 id="hero-today-name">Full Body Strength</h3>
+          <p id="hero-today-meta">45 min • Beginner • Dumbbells</p>
+          <button id="hero-open-today">OPEN SESSION →</button>
+        </aside>
+      </div>
+      <div class="scroll-tag">SCROLL TO TRAIN <span>↓</span></div>
+    </section>
+
+    <section class="visual-section visual-right" style="--photo:url('images/dumbbells.png')" id="choose">
+      <div class="section-panel reveal">
+        <div class="micro">01 / CHOOSE YOUR LANE</div>
+        <h2>WHAT ARE YOU TRAINING FOR?</h2>
+        <p>Pick the reason you showed up. The library will handle the rest.</p>
+
+        <div class="lane-grid">
+          <button class="lane" data-goal="Build Muscle">
+            <span class="lane-no">01</span>
+            <strong>BUILD MUSCLE</strong>
+            <small>More volume. More control. More growth.</small>
+          </button>
+          <button class="lane" data-goal="Strength">
+            <span class="lane-no">02</span>
+            <strong>GET STRONGER</strong>
+            <small>Big lifts. Lower reps. Longer rests.</small>
+          </button>
+          <button class="lane" data-goal="Conditioning">
+            <span class="lane-no">03</span>
+            <strong>GET CONDITIONED</strong>
+            <small>Move faster. Work harder. Recover better.</small>
+          </button>
+          <button class="lane" data-goal="Mobility">
+            <span class="lane-no">04</span>
+            <strong>MOVE BETTER</strong>
+            <small>Mobility, recovery, and easier days.</small>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-section" style="--photo:url('images/mobility.png')">
+      <div class="section-panel split-panel reveal">
+        <div>
+          <div class="micro">02 / TRAIN THE BODY</div>
+          <h2>PICK A BODY PART.<br>GET TO WORK.</h2>
+          <p>No endless menus. Tap a muscle group and jump straight to matching workouts.</p>
+        </div>
+        <div class="body-grid" id="body-grid"></div>
+      </div>
+    </section>
+
+    <section class="visual-section visual-right" style="--photo:url('images/squat.png')">
+      <div class="section-panel reveal">
+        <div class="micro">03 / BUILD YOUR WEEK</div>
+        <h2>ONE SESSION IS GOOD.<br>A SYSTEM IS BETTER.</h2>
+        <p>Use the weekly split as a base, then swap sessions from the workout library whenever you want.</p>
+        <a class="primary-btn inline-btn" href="#split">SEE THE 7-DAY SPLIT</a>
+      </div>
+    </section>
+
+    <section class="library-shell" id="library">
+      <div class="library-head">
+        <div>
+          <div class="micro">THE WORKOUT LIBRARY</div>
+          <h2>FIND YOUR SESSION.</h2>
+        </div>
+        <div class="library-count"><strong id="result-count">18</strong><span>WORKOUTS FOUND</span></div>
+      </div>
+
+      <div class="filter-bar">
+        <label class="search-box">
+          <span>SEARCH</span>
+          <input id="search" type="search" placeholder="chest, legs, dumbbells, home...">
+        </label>
+        <label>
+          <span>GOAL</span>
+          <select id="goal">
+            <option>All</option><option>Build Muscle</option><option>Strength</option><option>Conditioning</option><option>Mobility</option>
+          </select>
+        </label>
+        <label>
+          <span>LEVEL</span>
+          <select id="level">
+            <option>All</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>All Levels</option>
+          </select>
+        </label>
+        <label>
+          <span>WHERE</span>
+          <select id="location">
+            <option>All</option><option>Gym</option><option>Home</option><option>Anywhere</option>
+          </select>
+        </label>
+        <button class="reset-btn" id="clear">RESET</button>
+      </div>
+
+      <div class="workout-grid" id="workout-grid"></div>
+      <div class="empty" id="empty" hidden>
+        <strong>NO MATCH.</strong>
+        <p>Clear a filter or search something else.</p>
+      </div>
+    </section>
+
+    <section class="today-shell" id="today">
+      <div class="today-layout">
+        <div class="today-copy">
+          <div class="micro">ANTI//TRAIN DAILY</div>
+          <h2>DON'T KNOW WHAT TO DO?</h2>
+          <p>Press the button. Get a workout. Stop thinking about it.</p>
+          <button class="primary-btn" id="random-workout">GIVE ME A WORKOUT</button>
+        </div>
+        <div class="daily-pick" id="daily-pick">
+          <div class="daily-top">
+            <span>YOUR PICK</span>
+            <span id="daily-number">#01</span>
+          </div>
+          <h3 id="daily-name">Full Body Strength</h3>
+          <p id="daily-desc">A simple full-body session built around controlled strength work.</p>
+          <div class="daily-stats" id="daily-stats"></div>
+          <button id="daily-open">OPEN FULL WORKOUT →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-shell" id="split">
+      <div class="split-head">
+        <div class="micro">7-DAY TRAINING MAP</div>
+        <h2>YOUR WEEK.<br>PLANNED.</h2>
+      </div>
+      <div class="week" id="weekly-plan"></div>
+    </section>
+
+    <section class="identity">
+      <div class="identity-mark">A//</div>
+      <div>
+        <div class="micro">ANTI//TRAIN</div>
+        <h2>THIS IS A WORKOUT SITE.<br>NOT A MOTIVATIONAL POSTER.</h2>
+        <p>Fast choices. Clear sessions. Real exercise details. Built to keep growing as Anti adds more training.</p>
+      </div>
+    </section>
+
+    <section class="health-note">
+      <strong>TRAIN SMART.</strong>
+      <p>These workouts are general fitness examples. Use loads and variations appropriate for your ability. Stop if you feel sharp pain, dizziness, or unusual symptoms, and get qualified medical or coaching guidance when needed.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo"><span class="slash">A//</span><span>TRAIN</span></div>
+    <p>Workout library • training plans • daily sessions</p>
+    <span>© 2026 ANTI//TRAIN</span>
+  </footer>
+
+  <dialog id="workout-modal">
+    <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+    <div id="modal-content"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
