@@ -61,32 +61,53 @@ const workouts = [
 
 
 const exerciseGuides = {
-  'squat': { img: 'images/exercises/squat-demo.jpg', tip: 'Chest tall, brace core, break at hips & knees together, descend below parallel and drive through full foot.' },
-  'bench': { img: 'images/exercises/bench-demo.jpg', tip: 'Squeeze shoulder blades into bench, maintain solid arch, lower bar to mid-chest, press up firmly.' },
-  'row': { img: 'images/exercises/row-demo.jpg', tip: 'Hinge at hips with flat back, drive elbows towards hips, squeeze back muscles, control the eccentric.' },
-  'deadlift': { img: 'images/exercises/deadlift-demo.jpg', tip: 'Hinge back at hips, engage lats, push floor away and squeeze glutes at the top lockout.' },
-  'press': { img: 'images/exercises/overhead-demo.jpg', tip: 'Brace core & glutes, press weight directly overhead without excessive spine arch, lock out overhead.' },
-  'arms': { img: 'images/exercises/arms-demo.jpg', tip: 'Pin elbows in place, squeeze biceps or triceps through full contraction, lower under strict control.' },
-  'core': { img: 'images/exercises/core-demo.jpg', tip: 'Straight line from heels to head, squeeze glutes, pull belly button inward, breathe steadily.' },
-  'lunge': { img: 'images/exercises/lunge-demo.jpg', tip: 'Take a generous stride, drop rear knee straight down, drive through front heel to return.' },
-  'pullup': { img: 'images/exercises/pullup-demo.jpg', tip: 'Full dead hang to initiate, depress scapulae, pull chest to bar, pause briefly, lower smoothly.' },
-  'pushup': { img: 'images/exercises/pushup-demo.jpg', tip: 'Keep body locked in plank, elbows at 45 degrees, lower chest until near floor, push up with power.' },
-  'mobility': { img: 'images/exercises/mobility-demo.jpg', tip: 'Slow, deep breathing into the movement. Never force sharp pain, expand range smoothly.' },
-  'hiit': { img: 'images/exercises/hiit-demo.jpg', tip: 'Explosive cadence, land softly on balls of feet, keep core braced and breathing controlled.' }
+  'goblet_squat': { videoId: 'lRYBbchqxtI', img: 'images/exercises/squat-demo.jpg', tip: 'Hold weight at upper chest, brace core, break at hips and knees, descend below parallel and drive through whole foot.' },
+  'back_squat': { videoId: 'PPmvh7gBTi0', img: 'images/exercises/squat-demo.jpg', tip: 'Bar across traps, tight upper back, brace core, descend with knees tracking toes, drive up with hips.' },
+  'db_bench': { videoId: '1V3vpcaxRYQ', img: 'images/exercises/bench-demo.jpg', tip: 'Retract scapulae into bench, 45-degree elbow tuck, lower dumbbells to outer chest, press up and converge slightly.' },
+  'bench_press': { videoId: 'hWbUlkb5Ms4', img: 'images/exercises/bench-demo.jpg', tip: 'Squeeze shoulder blades together, plant feet firm, touch lower sternum under control, drive bar up.' },
+  'incline_press': { videoId: '8fXfwG4ftaQ', img: 'images/exercises/bench-demo.jpg', tip: 'Set bench to 30 degrees, pack shoulders, control descent to clavicle, press up over upper chest.' },
+  'pushup': { videoId: 'I9fsqKE5XHo', img: 'images/exercises/pushup-demo.jpg', tip: 'Body locked in rigid plank, elbows angled 45 degrees, chest to floor, drive ground away.' },
+  'db_row': { videoId: 'qN54-QNO1eQ', img: 'images/exercises/row-demo.jpg', tip: 'Flat spine, pull dumbbell back toward hip pocket, pause and squeeze lat, control the stretch.' },
+  'barbell_row': { videoId: 'Nqh7q3zDCoQ', img: 'images/exercises/row-demo.jpg', tip: '45-degree hip hinge, pull bar to belly button, squeeze shoulder blades together without standing up.' },
+  'lat_pulldown': { videoId: 'bNmvKpJSWKM', img: 'images/exercises/pullup-demo.jpg', tip: 'Chest tall, drive elbows straight down into sides, squeeze lats at bottom, control eccentric stretch.' },
+  'pullup': { videoId: 'OEXosPwzFdc', img: 'images/exercises/pullup-demo.jpg', tip: 'Full dead hang, engage scapulae, pull chest to bar with no swinging, lower with smooth control.' },
+  'deadlift': { videoId: 'ZaTM37cfiDs', img: 'images/exercises/deadlift-demo.jpg', tip: 'Bar over mid-foot, engage lats, push floor away with legs, lock out hips without hyperextending.' },
+  'rdl': { videoId: 'vnEANU7BqqY', img: 'images/exercises/deadlift-demo.jpg', tip: 'Slight knee bend, push hips back like closing a door behind you, feel deep hamstring stretch, squeeze glutes to stand.' },
+  'shoulder_press': { videoId: 'wO0l5jW2NtQ', img: 'images/exercises/overhead-demo.jpg', tip: 'Brace abs and glutes, press dumbbells overhead in a smooth arc, lock out elbows without arching lower back.' },
+  'lateral_raise': { videoId: 'Kl3LEzQ5Zqs', img: 'images/exercises/overhead-demo.jpg', tip: 'Slight forward lean, raise arms in scapular plane with elbows slightly bent, lead with elbows, pause at parallel.' },
+  'bicep_curl': { videoId: 'iui51E31sX8', img: 'images/exercises/arms-demo.jpg', tip: 'Keep elbows pinned at sides, curl without swinging hips, squeeze peak biceps contraction, lower slowly.' },
+  'triceps_pushdown': { videoId: 'NvZKjiZ8NYc', img: 'images/exercises/arms-demo.jpg', tip: 'Lock elbows at your ribs, spread rope or push bar down until full elbow extension, control return.' },
+  'plank': { videoId: 'v25dawSzRTM', img: 'images/exercises/core-demo.jpg', tip: 'Straight line from heels to head, squeeze glutes and quads, brace abs like taking a punch, breathe steadily.' },
+  'lunge': { videoId: 'BYe4uyGF-h4', img: 'images/exercises/lunge-demo.jpg', tip: 'Step forward into 90/90 angles, lower back knee just above floor, drive through front heel to return.' },
+  'bulgarian_split_squat': { videoId: 'or1frhkjBDc', img: 'images/exercises/lunge-demo.jpg', tip: 'Rear foot elevated on bench, torso slightly pitched forward, descend into front quad & glute, press up.' },
+  'hip_thrust': { videoId: 'pUdIL5x0fWg', img: 'images/exercises/deadlift-demo.jpg', tip: 'Upper back on bench, drive through heels, lift hips into full horizontal extension, tuck chin, squeeze glutes.' },
+  'mobility': { videoId: 'LIVJZZyZ2qM', img: 'images/exercises/mobility-demo.jpg', tip: 'Slow, controlled transitions synced with deep diaphragmatic breathing. Expand joint range gently.' },
+  'hiit': { videoId: 'hZb6jTbCLeE', img: 'images/exercises/hiit-demo.jpg', tip: 'Explosive cadence, light athletic foot contact, keep core tight and maintain steady breathing rhythms.' }
 };
 
 function getExerciseGuide(name) {
   const n = (name || '').toLowerCase();
-  if (n.includes('squat')) return exerciseGuides['squat'];
-  if (n.includes('bench') || n.includes('fly')) return exerciseGuides['bench'];
+  if (n.includes('goblet')) return exerciseGuides['goblet_squat'];
+  if (n.includes('bulgarian') || n.includes('split squat')) return exerciseGuides['bulgarian_split_squat'];
+  if (n.includes('lunge')) return exerciseGuides['lunge'];
+  if (n.includes('squat') || n.includes('leg press')) return exerciseGuides['back_squat'];
+  if (n.includes('incline')) return exerciseGuides['incline_press'];
+  if (n.includes('dumbbell bench') || n.includes('floor press')) return exerciseGuides['db_bench'];
+  if (n.includes('bench') || n.includes('fly')) return exerciseGuides['bench_press'];
   if (n.includes('push-up')) return exerciseGuides['pushup'];
-  if (n.includes('pull-up') || n.includes('pulldown') || n.includes('hang')) return exerciseGuides['pullup'];
-  if (n.includes('row')) return exerciseGuides['row'];
-  if (n.includes('rdl') || n.includes('deadlift') || n.includes('hip thrust') || n.includes('extension')) return exerciseGuides['deadlift'];
-  if (n.includes('press') || n.includes('lateral') || n.includes('delt')) return exerciseGuides['press'];
-  if (n.includes('curl') || n.includes('triceps') || n.includes('pressdown')) return exerciseGuides['arms'];
-  if (n.includes('plank') || n.includes('bug') || n.includes('bird') || n.includes('core')) return exerciseGuides['core'];
-  if (n.includes('lunge') || n.includes('split')) return exerciseGuides['lunge'];
+  if (n.includes('single-arm') || n.includes('one-arm')) return exerciseGuides['db_row'];
+  if (n.includes('dumbbell row')) return exerciseGuides['db_row'];
+  if (n.includes('row')) return exerciseGuides['barbell_row'];
+  if (n.includes('pulldown')) return exerciseGuides['lat_pulldown'];
+  if (n.includes('pull-up') || n.includes('hang')) return exerciseGuides['pullup'];
+  if (n.includes('rdl') || n.includes('romanian')) return exerciseGuides['rdl'];
+  if (n.includes('hip thrust') || n.includes('glute bridge')) return exerciseGuides['hip_thrust'];
+  if (n.includes('deadlift') || n.includes('extension')) return exerciseGuides['deadlift'];
+  if (n.includes('lateral') || n.includes('rear-delt') || n.includes('delt')) return exerciseGuides['lateral_raise'];
+  if (n.includes('press') || n.includes('farmer')) return exerciseGuides['shoulder_press'];
+  if (n.includes('curl')) return exerciseGuides['bicep_curl'];
+  if (n.includes('triceps') || n.includes('pressdown')) return exerciseGuides['triceps_pushdown'];
+  if (n.includes('plank') || n.includes('bug') || n.includes('bird') || n.includes('core')) return exerciseGuides['plank'];
   if (n.includes('stretch') || n.includes('cat-cow') || n.includes('pose') || n.includes('switch') || n.includes('needle') || n.includes('rotation')) return exerciseGuides['mobility'];
   return exerciseGuides['hiit'];
 }
@@ -162,6 +183,34 @@ function render(){
   }).join('');
 }
 
+function toggleExerciseVideo(cardIndex){
+  const embed = modalContent.querySelector(`#video-embed-${cardIndex}`);
+  const btn = modalContent.querySelector(`.watch-video-btn[data-trigger-video="${cardIndex}"]`);
+  if (!embed) return;
+  const iframe = embed.querySelector('iframe');
+  const isHidden = embed.style.display === 'none';
+
+  if (isHidden) {
+    embed.style.display = 'block';
+    if (iframe && (!iframe.src || iframe.src === 'about:blank' || iframe.src.endsWith('/'))) {
+      iframe.src = iframe.dataset.src;
+    }
+    if (btn) {
+      btn.classList.add('active');
+      const span = btn.querySelector('span');
+      if (span) span.textContent = '✕ HIDE VIDEO';
+    }
+  } else {
+    embed.style.display = 'none';
+    if (iframe) iframe.src = 'about:blank';
+    if (btn) {
+      btn.classList.remove('active');
+      const span = btn.querySelector('span');
+      if (span) span.textContent = 'WATCH FORM VIDEO';
+    }
+  }
+}
+
 function openWorkout(index){
   const w=workouts[index];
   if(!w)return;
@@ -183,16 +232,19 @@ function openWorkout(index){
     <div class="exercise-section-header">
       <div class="micro">MOVEMENT DEMONSTRATIONS & FORM GUIDE</div>
       <h3>EXERCISES IN THIS WORKOUT</h3>
-      <p>Follow the form cues and visual demonstrations below to execute each movement with proper technique.</p>
+      <p>Click "WATCH FORM VIDEO" or tap any movement below for HD video demonstration showing proper biomechanics and execution.</p>
     </div>
 
     <div class="exercise-cards-list">
       ${w.exercises.map((e,i)=>{
         const guide = getExerciseGuide(e[0]);
         return `
-        <article class="exercise-card">
-          <div class="exercise-thumb" style="background-image:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.75)),url('${guide.img}')">
+        <article class="exercise-card" id="card-${i}">
+          <div class="exercise-thumb" data-trigger-video="${i}" style="background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.75)),url('${guide.img}')" title="Click to watch ${esc(e[0])} form video">
             <span class="exercise-badge">MOVE #${i+1}</span>
+            <div class="thumb-play-overlay">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
           </div>
           <div class="exercise-details">
             <div class="exercise-top">
@@ -207,6 +259,27 @@ function openWorkout(index){
               <span class="cue-label">PROPER FORM:</span> ${esc(guide.tip)}
               ${e[4] ? `<div class="exercise-extra-note">💡 ${esc(e[4])}</div>` : ''}
             </div>
+
+            <div class="exercise-actions">
+              <button class="watch-video-btn" data-trigger-video="${i}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                <span>WATCH FORM VIDEO</span>
+              </button>
+              <a class="yt-fallback-btn" href="https://www.youtube.com/watch?v=${guide.videoId}" target="_blank" rel="noopener noreferrer" title="Watch full video on YouTube">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                <span>YOUTUBE ↗</span>
+              </a>
+            </div>
+
+            <div class="exercise-video-embed" id="video-embed-${i}" style="display:none">
+              <div class="video-embed-inner">
+                <iframe src="" data-src="https://www.youtube-nocookie.com/embed/${guide.videoId}?autoplay=1&rel=0&modestbranding=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="${esc(e[0])} proper form tutorial"></iframe>
+                <div class="video-embed-controls">
+                  <span class="video-cue-pill">▶ Proper Execution &amp; Technique Guide</span>
+                  <button class="close-video-btn" data-close-video="${i}">✕ CLOSE VIDEO</button>
+                </div>
+              </div>
+            </div>
           </div>
         </article>`;
       }).join('')}
@@ -214,47 +287,87 @@ function openWorkout(index){
 
     <div class="modal-note"><strong>TRAIN SMART:</strong> warm up, use controlled reps, pick a load you can handle with solid form, and stop if you feel sharp pain, dizziness, or unusual symptoms.</div>
   </div>`;
+
+  modalContent.onclick = e => {
+    const trigger = e.target.closest('[data-trigger-video]');
+    if (trigger) {
+      e.preventDefault();
+      toggleExerciseVideo(trigger.dataset.triggerVideo);
+      return;
+    }
+    const closer = e.target.closest('[data-close-video]');
+    if (closer) {
+      e.preventDefault();
+      toggleExerciseVideo(closer.dataset.closeVideo);
+      return;
+    }
+  };
+
   modal.showModal();
 }
 
+function closeWorkoutModal(){
+  modal.querySelectorAll('iframe').forEach(f => f.src = 'about:blank');
+  modal.close();
+}
+
+$('#modal-close').addEventListener('click', closeWorkoutModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeWorkoutModal(); });
+modal.addEventListener('cancel', closeWorkoutModal);
+
 function setDaily(index){
   const w=workouts[index];
-  $('#daily-number').textContent = `#${String(index+1).padStart(2,'0')}`;
-  $('#daily-name').textContent = w.name;
-  $('#daily-desc').textContent = w.description;
-  $('#daily-stats').innerHTML = `
-    <div><span>TIME</span><strong>${w.duration}</strong></div>
-    <div><span>LEVEL</span><strong>${w.level}</strong></div>
-    <div><span>WHERE</span><strong>${w.location}</strong></div>`;
-  $('#daily-open').dataset.index = index;
-  $('#hero-today-name').textContent = w.name;
-  $('#hero-today-meta').textContent = `${w.duration} • ${w.level} • ${w.equipment}`;
-  $('#hero-open-today').dataset.index = index;
+  if(!w)return;
+  const numEl = $('#daily-number');
+  if(numEl) numEl.textContent = `#${String(index+1).padStart(2,'0')}`;
+  const nameEl = $('#daily-name');
+  if(nameEl) nameEl.textContent = w.name;
+  const descEl = $('#daily-desc');
+  if(descEl) descEl.textContent = w.description;
+  const statsEl = $('#daily-stats');
+  if(statsEl) {
+    statsEl.innerHTML = `
+      <div><span>TIME</span><strong>${w.duration}</strong></div>
+      <div><span>LEVEL</span><strong>${w.level}</strong></div>
+      <div><span>WHERE</span><strong>${w.location}</strong></div>`;
+  }
+  const dailyOpen = $('#daily-open');
+  if(dailyOpen) dailyOpen.dataset.index = index;
+  const heroTodayName = $('#hero-today-name');
+  if(heroTodayName) heroTodayName.textContent = w.name;
+  const heroTodayMeta = $('#hero-today-meta');
+  if(heroTodayMeta) heroTodayMeta.textContent = `${w.duration} • ${w.level} • ${w.equipment}`;
+  const heroOpenToday = $('#hero-open-today');
+  if(heroOpenToday) heroOpenToday.dataset.index = index;
 }
 
 function randomIndex(){
   return Math.floor(Math.random()*workouts.length);
 }
 
-[search,goal,level,locationSelect].forEach(el=>el.addEventListener('input',render));
-$('#clear').addEventListener('click',()=>{search.value='';goal.value='All';level.value='All';locationSelect.value='All';render()});
-grid.addEventListener('click',e=>{const b=e.target.closest('.open-workout');if(b)openWorkout(Number(b.dataset.index))});
-$('#body-grid').addEventListener('click',e=>{
+[search,goal,level,locationSelect].forEach(el=>{ if(el) el.addEventListener('input',render); });
+const clearBtn = $('#clear');
+if(clearBtn) clearBtn.addEventListener('click',()=>{ search.value=''; goal.value='All'; level.value='All'; locationSelect.value='All'; render(); });
+if(grid) grid.addEventListener('click',e=>{ const b=e.target.closest('.open-workout'); if(b) openWorkout(Number(b.dataset.index)); });
+const bodyGrid = $('#body-grid');
+if(bodyGrid) bodyGrid.addEventListener('click',e=>{
   const b=e.target.closest('[data-term]'); if(!b)return;
   search.value=b.dataset.term; goal.value='All'; level.value='All'; locationSelect.value='All'; render();
-  $('#library').scrollIntoView({behavior:'smooth'});
+  $('#library')?.scrollIntoView({behavior:'smooth'});
 });
 document.querySelectorAll('.lane').forEach(b=>b.addEventListener('click',()=>{
   goal.value=b.dataset.goal; search.value=''; level.value='All'; locationSelect.value='All'; render();
-  $('#library').scrollIntoView({behavior:'smooth'});
+  $('#library')?.scrollIntoView({behavior:'smooth'});
 }));
-$('#random-workout').addEventListener('click',()=>setDaily(randomIndex()));
+const randomBtn = $('#random-workout');
+if(randomBtn) randomBtn.addEventListener('click',()=>setDaily(randomIndex()));
 const randTop = $('#random-top');
-if (randTop) randTop.addEventListener('click',()=>{const i=randomIndex();setDaily(i);openWorkout(i)});
-$('#daily-open').addEventListener('click',e=>openWorkout(Number(e.currentTarget.dataset.index)));
-$('#hero-open-today').addEventListener('click',e=>openWorkout(Number(e.currentTarget.dataset.index)));
-$('#modal-close').addEventListener('click',()=>modal.close());
-modal.addEventListener('click',e=>{if(e.target===modal)modal.close()});
+if (randTop) randTop.addEventListener('click',()=>{ const i=randomIndex(); setDaily(i); openWorkout(i); });
+const dailyOpen = $('#daily-open');
+if(dailyOpen) dailyOpen.addEventListener('click',e=>openWorkout(Number(e.currentTarget.dataset.index)));
+const heroOpenToday = $('#hero-open-today');
+if(heroOpenToday) heroOpenToday.addEventListener('click',e=>openWorkout(Number(e.currentTarget.dataset.index)));
+
 
 // ==========================================
 // WORKOUT REST & INTERVAL TIMER
