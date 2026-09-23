@@ -1,21 +1,22 @@
 // ==========================================
-// SITE CONFIGURATION — CHANGE YOUR SITE NAME HERE
+// SITE CONFIGURATION — LIFTE4TMR
 // ==========================================
 const SITE_CONFIG = {
-  brandPrefix: "A//",          // Logo prefix (e.g. "A//", "FIT//", "REP//")
-  brandName: "TRAIN",          // Main brand name (e.g. "TRAIN", "LIFT", "SPLIT")
-  fullName: "ANTI//TRAIN",      // Full brand name used across badges & texts
-  tagline: "WORKOUT SYSTEM",   // Subtitle under the logo / hero
+  brandPrefix: "LIFTE",
+  brandName: "4TMR",
+  fullName: "LIFTE4TMR",
+  tagline: "STRONGER TOMORROW",
+  domain: "lifte4tmr.site"
 };
 
 function applyBrandConfig() {
-  document.title = SITE_CONFIG.fullName;
+  document.title = `${SITE_CONFIG.fullName} — Workout System & Daily Training`;
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.content = `${SITE_CONFIG.fullName} — workout library, training plans, and daily sessions.`;
 
   // Update all logos
   document.querySelectorAll('.logo').forEach(el => {
-    el.innerHTML = `<span class="slash">${SITE_CONFIG.brandPrefix}</span><span>${SITE_CONFIG.brandName}</span>`;
+    el.innerHTML = `<img src="images/logo.png" alt="${SITE_CONFIG.fullName}" class="logo-mark"><span class="logo-text"><span class="brand-base">${SITE_CONFIG.brandPrefix}</span><span class="slash">${SITE_CONFIG.brandName}</span></span>`;
   });
 
   // Update hero micro
@@ -28,13 +29,13 @@ function applyBrandConfig() {
 
   // Update identity section
   const idMark = document.querySelector('.identity-mark');
-  if (idMark) idMark.textContent = SITE_CONFIG.brandPrefix;
+  if (idMark) idMark.innerHTML = `<img src="images/logo.png" alt="${SITE_CONFIG.fullName}" class="identity-logo">`;
   const idMicro = document.querySelector('.identity .micro');
   if (idMicro) idMicro.textContent = SITE_CONFIG.fullName;
 
   // Update footer copyright
   const footerYear = document.querySelector('footer > span') || document.querySelector('footer span');
-  if (footerYear) footerYear.textContent = `© ${new Date().getFullYear()} ${SITE_CONFIG.fullName}`;
+  if (footerYear) footerYear.textContent = `© ${new Date().getFullYear()} ${SITE_CONFIG.domain || SITE_CONFIG.fullName}`;
 }
 
 const workouts = [

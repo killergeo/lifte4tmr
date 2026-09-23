@@ -19,7 +19,9 @@ button{color:inherit}
 .progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:100;background:rgba(255,255,255,.04)}
 .progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acid),var(--orange))}
 .nav-shell{position:fixed;z-index:90;top:3px;left:0;right:0;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 max(22px,calc((100vw - var(--max))/2));background:rgba(7,9,12,.73);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.logo{display:flex;align-items:center;gap:4px;font-weight:1000;letter-spacing:-.05em;font-size:1.3rem}
+.logo{display:flex;align-items:center;gap:10px;font-weight:1000;letter-spacing:-.05em;font-size:1.3rem}
+.logo-mark{width:36px;height:36px;border-radius:8px;object-fit:cover;border:1px solid rgba(217,255,77,.4);box-shadow:0 0 10px rgba(217,255,77,.15);display:inline-block;flex-shrink:0}
+.logo-text{display:inline-flex;align-items:center}
 .logo .slash{color:var(--acid)}
 .nav-shell nav{display:flex;gap:26px;font-size:.85rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .nav-shell nav a{color:#c2c8d0}
@@ -129,8 +131,9 @@ h3{font-size:1.5rem}
 .day strong{font-size:1.25rem;margin-top:24px}
 .day p{color:var(--muted);font-size:.85rem;line-height:1.45}
 .day span:last-child{margin-top:auto;font-size:.65rem;color:#77828d}
-.identity{display:grid;grid-template-columns:260px 1fr;gap:50px;align-items:center;background:#080a0d;border-top:1px solid var(--line)}
-.identity-mark{font-size:8rem;font-weight:1000;letter-spacing:-.1em;color:var(--acid)}
+.identity{display:grid;grid-template-columns:200px 1fr;gap:50px;align-items:center;background:#080a0d;border-top:1px solid var(--line)}
+.identity-mark{display:flex;align-items:center;justify-content:center}
+.identity-logo{width:160px;height:160px;border-radius:20px;object-fit:cover;border:2px solid rgba(217,255,77,.35);box-shadow:0 0 35px rgba(217,255,77,.18)}
 .identity p{max-width:700px}
 .health-note{background:#050709;border-top:1px solid var(--line);display:grid;grid-template-columns:180px 1fr;gap:30px;align-items:start}
 .health-note strong{color:var(--orange);font-size:.8rem;letter-spacing:.15em}
@@ -184,7 +187,7 @@ dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
   .filter-bar{grid-template-columns:1fr 1fr}
   .reset-btn{align-self:stretch}
   .identity{grid-template-columns:1fr}
-  .identity-mark{font-size:5rem}
+  .identity-mark{justify-content:flex-start}
 }
 @media(max-width:650px){
   .nav-shell{height:64px}
