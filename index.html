@@ -18,11 +18,12 @@
       <span class="logo-text"><span class="brand-base">LIFTE</span><span class="slash">4TMR</span></span>
     </a>
     <nav>
-      <a href="#choose">Train</a>
       <a href="#results">Results</a>
+      <a href="#timer">Timer</a>
+      <a href="#demos">Demo Workouts</a>
+      <a href="#diet">Diet Plan</a>
+      <a href="#stretches">Stretches</a>
       <a href="#library">Library</a>
-      <a href="#today">Today</a>
-      <a href="#split">7-Day Split</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-actions">
@@ -42,8 +43,11 @@
           <h1>NO EXCUSES.<br><span>JUST REPS.</span></h1>
           <p class="hero-lead">A workout-first platform built for people who want to open the site, pick a goal, and train.</p>
           <div class="hero-actions">
-            <a class="primary-btn" href="#choose">CHOOSE YOUR WORKOUT</a>
-            <a class="outline-btn" href="#results">WORK WITH ME →</a>
+            <a class="primary-btn" href="#results">TRAIN WITH ME (RESULTS) →</a>
+            <a class="outline-btn" href="#timer">WORKOUT TIMER ⏱</a>
+            <a class="outline-btn" href="#demos">DEMO WORKOUTS</a>
+            <a class="outline-btn" href="#diet">DIET PLANS</a>
+            <a class="outline-btn" href="#stretches">STRETCHES</a>
           </div>
           <div class="hero-meta">
             <div><strong>18</strong><span>starter workouts</span></div>
@@ -62,102 +66,10 @@
       <div class="scroll-tag">SCROLL TO TRAIN <span>↓</span></div>
     </section>
 
-    <section class="visual-section visual-right" style="--photo:url('images/dumbbells.png')" id="choose">
-      <div class="section-panel reveal">
-        <div class="micro">01 / CHOOSE YOUR LANE</div>
-        <h2>WHAT ARE YOU TRAINING FOR?</h2>
-        <p>Pick the reason you showed up. The library will handle the rest.</p>
-
-        <div class="lane-grid">
-          <button class="lane" data-goal="Build Muscle">
-            <span class="lane-no">01</span>
-            <strong>BUILD MUSCLE</strong>
-            <small>More volume. More control. More growth.</small>
-          </button>
-          <button class="lane" data-goal="Strength">
-            <span class="lane-no">02</span>
-            <strong>GET STRONGER</strong>
-            <small>Big lifts. Lower reps. Longer rests.</small>
-          </button>
-          <button class="lane" data-goal="Conditioning">
-            <span class="lane-no">03</span>
-            <strong>GET CONDITIONED</strong>
-            <small>Move faster. Work harder. Recover better.</small>
-          </button>
-          <button class="lane" data-goal="Mobility">
-            <span class="lane-no">04</span>
-            <strong>MOVE BETTER</strong>
-            <small>Mobility, recovery, and easier days.</small>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="visual-section" style="--photo:url('images/mobility.png')">
-      <div class="section-panel split-panel reveal">
-        <div>
-          <div class="micro">02 / TRAIN THE BODY</div>
-          <h2>PICK A BODY PART.<br>GET TO WORK.</h2>
-          <p>No endless menus. Tap a muscle group and jump straight to matching workouts.</p>
-        </div>
-        <div class="body-grid" id="body-grid"></div>
-      </div>
-    </section>
-
-    <section class="visual-section visual-right" style="--photo:url('images/squat.png')">
-      <div class="section-panel reveal">
-        <div class="micro">03 / BUILD YOUR WEEK</div>
-        <h2>ONE SESSION IS GOOD.<br>A SYSTEM IS BETTER.</h2>
-        <p>Use the weekly split as a base, then swap sessions from the workout library whenever you want.</p>
-        <a class="primary-btn inline-btn" href="#split">SEE THE 7-DAY SPLIT</a>
-      </div>
-    </section>
-
-    <section class="library-shell" id="library">
-      <div class="library-head">
-        <div>
-          <div class="micro">THE WORKOUT LIBRARY</div>
-          <h2>FIND YOUR SESSION.</h2>
-        </div>
-        <div class="library-count"><strong id="result-count">18</strong><span>WORKOUTS FOUND</span></div>
-      </div>
-
-      <div class="filter-bar">
-        <label class="search-box">
-          <span>SEARCH</span>
-          <input id="search" type="search" placeholder="chest, legs, dumbbells, home...">
-        </label>
-        <label>
-          <span>GOAL</span>
-          <select id="goal">
-            <option>All</option><option>Build Muscle</option><option>Strength</option><option>Conditioning</option><option>Mobility</option>
-          </select>
-        </label>
-        <label>
-          <span>LEVEL</span>
-          <select id="level">
-            <option>All</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>All Levels</option>
-          </select>
-        </label>
-        <label>
-          <span>WHERE</span>
-          <select id="location">
-            <option>All</option><option>Gym</option><option>Home</option><option>Anywhere</option>
-          </select>
-        </label>
-        <button class="reset-btn" id="clear">RESET</button>
-      </div>
-
-      <div class="workout-grid" id="workout-grid"></div>
-      <div class="empty" id="empty" hidden>
-        <strong>NO MATCH.</strong>
-        <p>Clear a filter or search something else.</p>
-      </div>
-    </section>
-
+    <!-- 1-ON-1 COACHING & REAL RESULTS GALLERY -->
     <section class="results-shell" id="results">
       <div class="results-head reveal">
-        <div class="micro">REAL RESULTS • 1-ON-1 COACHING</div>
+        <div class="micro">WORK WITH ME • 1-ON-1 COACHING</div>
         <h2>WANT TO GET BUILT LIKE THIS?<br><span>TRAIN WITH JARED.</span></h2>
         <p class="results-lead">
           No shortcuts, no gimmicks, no fluff. Just disciplined lifting, dialed-in nutrition, and consistency.
@@ -291,6 +203,529 @@
             <a class="outline-btn" href="https://www.instagram.com/lifte4tmrllc/" target="_blank" rel="noopener noreferrer">DM ON INSTAGRAM →</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- WORKOUT REST & INTERVAL TIMER -->
+    <section class="timer-shell" id="timer">
+      <div class="section-panel reveal" style="width:100%">
+        <div class="micro">WORKOUT TOOL • BUILT-IN INTERVAL & REST TIMER</div>
+        <h2>TIME YOUR REST.<br><span>CRUSH YOUR SETS.</span></h2>
+        <p>Rest intervals determine training results. Time your rests between heavy compound sets, or switch to stopwatch mode to track endurance and planks.</p>
+
+        <div class="timer-card" style="margin-top:28px">
+          <div class="timer-display-box" id="timer-display-box">
+            <div class="timer-readout" id="timer-readout">01:00</div>
+            <div class="timer-status" id="timer-status">REST TIMER READY</div>
+            <div class="timer-controls">
+              <button class="timer-btn start" id="timer-start">START</button>
+              <button class="timer-btn reset" id="timer-reset">RESET</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="micro">QUICK REST PRESETS</div>
+            <div class="timer-presets">
+              <button class="preset-chip" data-seconds="30">30 SEC</button>
+              <button class="preset-chip" data-seconds="45">45 SEC</button>
+              <button class="preset-chip active" data-seconds="60">60 SEC</button>
+              <button class="preset-chip" data-seconds="90">90 SEC</button>
+              <button class="preset-chip" data-seconds="120">2 MIN</button>
+              <button class="preset-chip" data-seconds="180">3 MIN</button>
+              <button class="preset-chip" data-seconds="0" data-mode="stopwatch">⏱ STOPWATCH</button>
+            </div>
+            <div style="margin-top:20px;color:var(--muted);font-size:.85rem;line-height:1.5">
+              💡 <em>Tip: For muscle hypertrophy (building size), keep rests between 60–90 seconds. For heavy compound strength (squats & deadlifts), use 2–3 minutes.</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO EXAMPLES OF WORKOUTS -->
+    <section class="demos-shell" id="demos">
+      <div class="reveal">
+        <div class="micro">DEMO SESSIONS • PROVEN ROUTINES</div>
+        <h2>DEMO EXAMPLES OF WORKOUTS.<br><span>BUILT FOR RESULTS.</span></h2>
+        <p class="results-lead">These sample routines demonstrate how Lifte4tmr structures progressive overload, rep ranges, and rest intervals. Try these sessions right now or click the timer buttons to auto-load rest periods.</p>
+      </div>
+
+      <div class="demos-grid reveal delay-1">
+        <div class="demo-card">
+          <div class="demo-head">
+            <div>
+              <span class="demo-badge">HYPERTROPHY • 45 MIN</span>
+              <h3>Chest & Triceps Builder</h3>
+            </div>
+          </div>
+          <p>Upper body push session engineered to build a thick upper chest, dense triceps, and shoulder stability.</p>
+          <div class="demo-exercise-list">
+            <div class="demo-exercise-item"><strong>1. Incline Dumbbell Bench Press</strong><span>4 sets x 8–10 reps</span></div>
+            <div class="demo-exercise-item"><strong>2. Flat Dumbbell Chest Press</strong><span>3 sets x 10–12 reps</span></div>
+            <div class="demo-exercise-item"><strong>3. Cable / Dumbbell Flyes</strong><span>3 sets x 12–15 reps</span></div>
+            <div class="demo-exercise-item"><strong>4. Triceps Rope Pushdown</strong><span>3 sets x 12–15 reps</span></div>
+            <div class="demo-exercise-item"><strong>5. Bodyweight Dips / Push-ups</strong><span>3 sets x Near Failure</span></div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <button class="primary-btn" data-load-timer="75">⏱ START 75S REST TIMER</button>
+            <a class="outline-btn" href="#library">BROWSE ALL 18 WORKOUTS →</a>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-head">
+            <div>
+              <span class="demo-badge">V-TAPER • 50 MIN</span>
+              <h3>Back Density & Biceps</h3>
+            </div>
+          </div>
+          <p>The signature back development blueprint designed to widen your lats and build dense posterior thickness.</p>
+          <div class="demo-exercise-list">
+            <div class="demo-exercise-item"><strong>1. Wide Lat Pulldown / Pull-Ups</strong><span>4 sets x 8–10 reps</span></div>
+            <div class="demo-exercise-item"><strong>2. Chest-Supported DB Row</strong><span>4 sets x 10–12 reps</span></div>
+            <div class="demo-exercise-item"><strong>3. Single-Arm Dumbbell Row</strong><span>3 sets x 10 each side</span></div>
+            <div class="demo-exercise-item"><strong>4. Face Pulls (Rear Delts)</strong><span>3 sets x 15 reps</span></div>
+            <div class="demo-exercise-item"><strong>5. Incline DB Bicep Curls</strong><span>3 sets x 10–12 reps</span></div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <button class="primary-btn" data-load-timer="90">⏱ START 90S REST TIMER</button>
+            <a class="outline-btn" href="#library">BROWSE ALL 18 WORKOUTS →</a>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-head">
+            <div>
+              <span class="demo-badge">POWER & QUADS • 55 MIN</span>
+              <h3>Lower Body Power</h3>
+            </div>
+          </div>
+          <p>Balanced lower body session focusing on quad sweep, glute activation, hamstring power, and core stability.</p>
+          <div class="demo-exercise-list">
+            <div class="demo-exercise-item"><strong>1. Barbell / Goblet Squat</strong><span>4 sets x 6–8 reps</span></div>
+            <div class="demo-exercise-item"><strong>2. Romanian Deadlift (RDL)</strong><span>4 sets x 8–10 reps</span></div>
+            <div class="demo-exercise-item"><strong>3. Walking Dumbbell Lunges</strong><span>3 sets x 12 steps/leg</span></div>
+            <div class="demo-exercise-item"><strong>4. Standing Calf Raises</strong><span>4 sets x 15 reps</span></div>
+            <div class="demo-exercise-item"><strong>5. Hanging Leg Raises (Abs)</strong><span>3 sets x 15 reps</span></div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <button class="primary-btn" data-load-timer="120">⏱ START 2 MIN REST TIMER</button>
+            <a class="outline-btn" href="#library">BROWSE ALL 18 WORKOUTS →</a>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-head">
+            <div>
+              <span class="demo-badge">FAT BURN & CORE • 16 MIN</span>
+              <h3>High-Intensity Conditioning</h3>
+            </div>
+          </div>
+          <p>Fast-paced conditioning routine designed to strip body fat, build lung capacity, and harden the core.</p>
+          <div class="demo-exercise-list">
+            <div class="demo-exercise-item"><strong>1. Mountain Climbers</strong><span>40s Work / 20s Rest</span></div>
+            <div class="demo-exercise-item"><strong>2. Dumbbell / Bodyweight Thrusters</strong><span>40s Work / 20s Rest</span></div>
+            <div class="demo-exercise-item"><strong>3. Plank Shoulder Taps</strong><span>40s Work / 20s Rest</span></div>
+            <div class="demo-exercise-item"><strong>4. Kettlebell / DB Swings</strong><span>40s Work / 20s Rest</span></div>
+            <div class="demo-exercise-item"><strong>Complete 4 Continuous Rounds</strong><span>Total Time: 16 Minutes</span></div>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+            <button class="primary-btn" data-load-timer="0" data-mode="stopwatch">⏱ START STOPWATCH</button>
+            <a class="outline-btn" href="#results">COACHING RESULTS →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO DIETARY & MEAL PLANS -->
+    <section class="diet-shell" id="diet">
+      <div class="reveal">
+        <div class="micro">NUTRITION BLUEPRINTS • DEMO MEAL PLANS</div>
+        <h2>DEMO EXAMPLES OF DIETARY PLANS.<br><span>EAT TO GET BUILT.</span></h2>
+        <p class="results-lead">Real results require dialing in your nutrition. These demonstration meal frameworks show the clean, whole-food fuel Jared uses for fat loss and muscle mass. When you book 1-on-1 coaching, you receive a 100% custom plan built specifically for your body and schedule.</p>
+      </div>
+
+      <div class="diet-tabs reveal delay-1">
+        <button class="diet-tab-btn active" data-target="plan-shred">PLAN A: SHRED & CUT (FAT LOSS / ABS)</button>
+        <button class="diet-tab-btn" data-target="plan-bulk">PLAN B: CLEAN MASS (BUILDING SIZE)</button>
+        <button class="diet-tab-btn" data-target="plan-athletic">PLAN C: ATHLETIC PERFORMANCE</button>
+      </div>
+
+      <!-- Plan A -->
+      <div class="diet-plan-card active reveal" id="plan-shred">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px">
+          <div>
+            <span class="micro" style="color:var(--acid)">GOAL: LOW BODY FAT & SIX-PACK DEFINITION</span>
+            <h3>The Shred & Cut Framework</h3>
+          </div>
+          <span class="card-level-badge">CALORIE DEFICIT • HIGH PROTEIN</span>
+        </div>
+        <p style="color:var(--muted);max-width:750px;margin-top:8px">Designed to burn stubborn body fat while preserving maximum lean muscle mass. Prioritizes lean protein, complex carbs timed around training, and fibrous vegetables.</p>
+
+        <div class="diet-stats-row">
+          <div class="diet-stat"><span>DAILY CALORIES</span><strong>~2,050 kcal</strong></div>
+          <div class="diet-stat"><span>PROTEIN</span><strong>190g (37%)</strong></div>
+          <div class="diet-stat"><span>CARBOHYDRATES</span><strong>175g (34%)</strong></div>
+          <div class="diet-stat"><span>HEALTHY FATS</span><strong>52g (29%)</strong></div>
+        </div>
+
+        <div class="meals-grid">
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 1 • BREAKFAST</span>
+            <strong>Egg Whites & Oats</strong>
+            <p>5 egg whites + 2 whole eggs scrambled with spinach, 1/2 cup rolled oats with blueberries and cinnamon, black coffee or green tea.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 2 • MID-DAY FUEL</span>
+            <strong>Whey & Almonds</strong>
+            <p>1 scoop whey isolate protein in cold water or almond milk, 15 raw almonds, and 1 medium crisp green apple.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 3 • LUNCH</span>
+            <strong>Chicken, Rice & Greens</strong>
+            <p>7 oz grilled chicken breast seasoned with lemon pepper, 1 cup cooked jasmine rice, 1.5 cups steamed broccoli with 1 tsp extra virgin olive oil.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 4 • PRE-WORKOUT</span>
+            <strong>Energy Rice Cakes</strong>
+            <p>2 brown rice cakes topped with 1 tbsp natural peanut butter and half sliced banana for rapid glycogen fueling.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 5 • DINNER</span>
+            <strong>Lean Turkey & Sweet Potato</strong>
+            <p>7 oz 93% lean ground turkey (or wild cod), 6 oz baked sweet potato with cinnamon, and grilled asparagus spears.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">DAILY HYDRATION</span>
+            <strong>Pure Water & Electrolytes</strong>
+            <p>Aim for 1 gallon (3.8 liters) of fresh water throughout the day. Add a pinch of sea salt in morning water for cellular hydration.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan B -->
+      <div class="diet-plan-card" id="plan-bulk">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px">
+          <div>
+            <span class="micro" style="color:var(--acid)">GOAL: MAXIMUM MUSCLE & V-TAPER SIZE</span>
+            <h3>The Clean Mass & Hypertrophy Blueprint</h3>
+          </div>
+          <span class="card-level-badge">CLEAN SURPLUS • HEAVY FUEL</span>
+        </div>
+        <p style="color:var(--muted);max-width:750px;margin-top:8px">A controlled caloric surplus focused on muscle growth with minimal fat spillover. High carbohydrates to fuel heavy compound squatting and pressing.</p>
+
+        <div class="diet-stats-row">
+          <div class="diet-stat"><span>DAILY CALORIES</span><strong>~2,900 kcal</strong></div>
+          <div class="diet-stat"><span>PROTEIN</span><strong>215g (30%)</strong></div>
+          <div class="diet-stat"><span>CARBOHYDRATES</span><strong>340g (47%)</strong></div>
+          <div class="diet-stat"><span>HEALTHY FATS</span><strong>75g (23%)</strong></div>
+        </div>
+
+        <div class="meals-grid">
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 1 • BREAKFAST</span>
+            <strong>Steak, Eggs & Sourdough</strong>
+            <p>4 whole eggs cooked sunny side up, 2 slices sprouted sourdough toast with half avocado, 1 cup cooked oatmeal with 1 tsp raw honey.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 2 • POST-MORNING FUEL</span>
+            <strong>Greek Yogurt & Berries</strong>
+            <p>1.5 cups plain Greek yogurt (2%), 1 scoop whey protein mixed in, 1/2 cup granola, and a handful of raw walnuts.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 3 • LUNCH</span>
+            <strong>Sirloin Steak & White Rice</strong>
+            <p>8 oz lean sirloin steak or salmon fillet, 1.5 cups cooked white rice, sautéed baby spinach with garlic and sea salt.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 4 • PRE-WORKOUT</span>
+            <strong>Bagel & Whey Isolate</strong>
+            <p>1 plain plain bagel with 1 tbsp organic fruit jam, 1 scoop whey isolate 45 minutes prior to hitting the gym floor.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 5 • DINNER</span>
+            <strong>Chicken Breast & Loaded Potato</strong>
+            <p>8 oz grilled chicken breast, 1 large baked russet potato with grass-fed butter and sea salt, steamed green beans.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 6 • NIGHT RECOVERY</span>
+            <strong>Casein & Peanut Butter</strong>
+            <p>1 cup low-fat cottage cheese or micellar casein shake with 1 tbsp natural peanut butter for sustained overnight protein synthesis.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Plan C -->
+      <div class="diet-plan-card" id="plan-athletic">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px">
+          <div>
+            <span class="micro" style="color:var(--acid)">GOAL: ATHLETIC ENDURANCE & RECOVERY</span>
+            <h3>The High-Performance Athlete Fuel</h3>
+          </div>
+          <span class="card-level-badge">BALANCED PERFORMANCE</span>
+        </div>
+        <p style="color:var(--muted);max-width:750px;margin-top:8px">Built for high work capacity, sprinting, and rapid recovery. Anti-inflammatory whole foods that keep joint inflammation low and energy steady all day.</p>
+
+        <div class="diet-stats-row">
+          <div class="diet-stat"><span>DAILY CALORIES</span><strong>~2,500 kcal</strong></div>
+          <div class="diet-stat"><span>PROTEIN</span><strong>175g (28%)</strong></div>
+          <div class="diet-stat"><span>CARBOHYDRATES</span><strong>290g (46%)</strong></div>
+          <div class="diet-stat"><span>HEALTHY FATS</span><strong>60g (26%)</strong></div>
+        </div>
+
+        <div class="meals-grid">
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 1 • BREAKFAST</span>
+            <strong>Superfood Omelet</strong>
+            <p>3 whole eggs + 2 whites with mushrooms, bell peppers, and avocado. 1 cup steel-cut oats with chia seeds and blueberries.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 2 • MID-DAY SHAKE</span>
+            <strong>Hydration Smoothie</strong>
+            <p>Coconut water, 1 scoop vanilla whey, 1 banana, handful of spinach, and 1 tbsp ground flaxseeds.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 3 • LUNCH</span>
+            <strong>Wild Salmon & Quinoa</strong>
+            <p>7 oz wild-caught salmon, 1 cup cooked quinoa, roasted zucchini and carrots with extra virgin olive oil.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 4 • PRE-TRAINING</span>
+            <strong>Fruit & Rice Cake Fuel</strong>
+            <p>2 rice cakes with almond butter and sliced dates for sustained natural electrolytes and simple sugars.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">MEAL 5 • DINNER</span>
+            <strong>Grass-Fed Beef Bowl</strong>
+            <p>7 oz 90% grass-fed lean beef, 1 cup brown rice, grilled peppers and onions, fresh salsa, and avocado slices.</p>
+          </div>
+          <div class="meal-box">
+            <span class="meal-tag">RECOVERY PROTOCOL</span>
+            <strong>Magnesium & Hydration</strong>
+            <p>Drink tart cherry juice or take magnesium glycinate before bed to lower cortisol and optimize deep stage sleep.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Plan Booking Note -->
+      <div class="diet-booking-note reveal">
+        <div>
+          <h4>NEED A 100% PERSONALIZED MEAL PLAN?</h4>
+          <p>These are sample demonstration frameworks. When you book 1-on-1 coaching with Jared, he calculates your exact basal metabolic rate (BMR), macros, and meal schedule tailored specifically to your body weight, budget, and dietary preferences.</p>
+        </div>
+        <a class="primary-btn" href="mailto:Jaredtesla75@gmail.com?subject=Custom%20Diet%20Plan%20Inquiry%20-%20Lifte4tmr">EMAIL JARED FOR YOUR PLAN →</a>
+      </div>
+    </section>
+
+    <!-- LIST OF STRETCHES & MOBILITY GUIDE -->
+    <section class="stretches-shell" id="stretches">
+      <div class="reveal">
+        <div class="micro">MOBILITY & RECOVERY • LIST OF STRETCHES</div>
+        <h2>STRETCHING & MOBILITY GUIDE.<br><span>TRAIN WITHOUT PAIN.</span></h2>
+        <p class="results-lead">Lifting heavy requires mobile joints, healthy tendons, and flexible muscle tissue. Use this comprehensive list of stretches for your pre-workout dynamic warm-up and post-workout recovery.</p>
+      </div>
+
+      <div class="stretches-grid reveal delay-1">
+        <div class="stretch-card">
+          <div>
+            <div class="stretch-top">
+              <span class="stretch-target">CHEST & SHOULDERS</span>
+              <span class="stretch-time">30–45s HOLD / SIDE</span>
+            </div>
+            <h3>Doorway Pec Stretch</h3>
+            <p>Place your forearm against a door frame at a 90-degree angle. Step gently forward with one foot until you feel a deep stretch across your chest and front delt.</p>
+          </div>
+          <div class="stretch-tip">💡 <strong>Why it matters:</strong> Counters rounded forward shoulders from desk work and bench pressing, improving breathing and posture.</div>
+        </div>
+
+        <div class="stretch-card">
+          <div>
+            <div class="stretch-top">
+              <span class="stretch-target">LATS & SPINE</span>
+              <span class="stretch-time">45–60s HANG</span>
+            </div>
+            <h3>Overhead Lat Hang & Decompression</h3>
+            <p>Hang from a pull-up bar with relaxed shoulders and feet lightly touching the floor or suspended. Breathe deeply into your ribcage and lats.</p>
+          </div>
+          <div class="stretch-tip">💡 <strong>Why it matters:</strong> Decompresses spinal discs after heavy squats and deadlifts while lengthening the latissimus dorsi.</p></div>
+        </div>
+
+        <div class="stretch-card">
+          <div>
+            <div class="stretch-top">
+              <span class="stretch-target">REAR DELT & ROTATOR CUFF</span>
+              <span class="stretch-time">30s HOLD / ARM</span>
+            </div>
+            <h3>Cross-Body Shoulder Stretch</h3>
+            <p>Bring one arm across your chest at shoulder height. Use your opposite arm to gently pull your elbow closer to your torso without twisting your spine.</p>
+          </div>
+          <div class="stretch-tip">💡 <strong>Why it matters:</strong> Prevents shoulder impingement and keeps rear delts and rotator cuffs supple for overhead lifts.</div>
+        </div>
+
+        <div class="stretch-card">
+          <div>
+            <div class="stretch-top">
+              <span class="stretch-target">HIP FLEXORS & QUADS</span>
+              <span class="stretch-time">45s HOLD / LEG</span>
+            </div>
+            <h3>The Couch Stretch</h3>
+            <p>Back foot elevated on a wall or bench with your knee against the floor. Squeeze your glute and keep your torso upright until you feel a deep front hip stretch.</p>
+          </div>
+          <div class="stretch-tip">💡 <strong>Why it matters:</strong> The king of hip openers. Reverses tight hip flexors from sitting and eliminates lower back squat strain.</div>
+        </div>
+
+        <div class="stretch-card">
+          <div>
+            <div class="stretch-top">
+              <span class="stretch-target">GLUTES & PIRIFORMIS</span>
+              <span class="stretch-time">45s HOLD / SIDE</span>
+            </div>
+            <h3>Pigeon Pose Glute Opener</h3>
+            <p>From a push-up position, bring one shin forward perpendicular to your mat. Extend your back leg straight behind you and lower your chest forward.</p>
+          </div>
+          <div class="stretch-tip">💡 <strong>Why it matters:</strong> Releases deep gluteal tightness that causes sciatica and hip restriction during deep squats.</div>
+        </div>
+
+        <div class="stretch-card">
+          <div>
+            <div class="stretch-top">
+              <span class="stretch-target">HAMSTRINGS</span>
+              <span class="stretch-time">10 SWEEPS / LEG</span>
+            </div>
+            <h3>Standing Hamstring Sweeps</h3>
+            <p>Step one heel forward with toes pointed up and leg straight. Hinge at your hips, sweep your hands down toward your foot in a smooth arc, and stand up.</p>
+          </div>
+          <div class="stretch-tip">💡 <strong>Why it matters:</strong> A dynamic movement that activates hamstring flexibility without weakening muscle contractility prior to lifting.</div>
+        </div>
+
+        <div class="stretch-card">
+          <div>
+            <div class="stretch-top">
+              <span class="stretch-target">FULL BODY / THORACIC</span>
+              <span class="stretch-time">5 REPS / SIDE</span>
+            </div>
+            <h3>World's Greatest Stretch</h3>
+            <p>Deep lunge with both hands inside front foot. Rotate your inside arm up toward the ceiling, tracking with your eyes, then bring elbow back down.</p>
+          </div>
+          <div class="stretch-tip">💡 <strong>Why it matters:</strong> Simultaneously opens ankles, hips, groin, thoracic spine, and hip flexors in one movement.</div>
+        </div>
+
+        <div class="stretch-card">
+          <div>
+            <div class="stretch-top">
+              <span class="stretch-target">ABDOMINALS & CORE</span>
+              <span class="stretch-time">30s HOLD</span>
+            </div>
+            <h3>Cobra Abdominal Stretch</h3>
+            <p>Lie face down, hands under shoulders. Gently press up while keeping your hips on the floor, lifting your chest and gazing upward with soft shoulders.</p>
+          </div>
+          <div class="stretch-tip">💡 <strong>Why it matters:</strong> Lengthens the rectus abdominis and psoas after intense ab and core workouts.</div>
+        </div>
+
+        <div class="stretch-card">
+          <div>
+            <div class="stretch-top">
+              <span class="stretch-target">LOWER BACK & SIDES</span>
+              <span class="stretch-time">45s HOLD</span>
+            </div>
+            <h3>Child's Pose with Side Reach</h3>
+            <p>Kneel with knees wide and big toes touching. Sit your hips back onto your heels, reach your arms out long, then walk both hands to the left, then right.</p>
+          </div>
+          <div class="stretch-tip">💡 <strong>Why it matters:</strong> Releases compressive tension in lumbar vertebrae and gently stretches obliques and lat borders.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-section visual-right" style="--photo:url('images/dumbbells.png')" id="choose">
+      <div class="section-panel reveal">
+        <div class="micro">01 / CHOOSE YOUR LANE</div>
+        <h2>WHAT ARE YOU TRAINING FOR?</h2>
+        <p>Pick the reason you showed up. The library will handle the rest.</p>
+
+        <div class="lane-grid">
+          <button class="lane" data-goal="Build Muscle">
+            <span class="lane-no">01</span>
+            <strong>BUILD MUSCLE</strong>
+            <small>More volume. More control. More growth.</small>
+          </button>
+          <button class="lane" data-goal="Strength">
+            <span class="lane-no">02</span>
+            <strong>GET STRONGER</strong>
+            <small>Big lifts. Lower reps. Longer rests.</small>
+          </button>
+          <button class="lane" data-goal="Conditioning">
+            <span class="lane-no">03</span>
+            <strong>GET CONDITIONED</strong>
+            <small>Move faster. Work harder. Recover better.</small>
+          </button>
+          <button class="lane" data-goal="Mobility">
+            <span class="lane-no">04</span>
+            <strong>MOVE BETTER</strong>
+            <small>Mobility, recovery, and easier days.</small>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="visual-section" style="--photo:url('images/mobility.png')">
+      <div class="section-panel split-panel reveal">
+        <div>
+          <div class="micro">02 / TRAIN THE BODY</div>
+          <h2>PICK A BODY PART.<br>GET TO WORK.</h2>
+          <p>No endless menus. Tap a muscle group and jump straight to matching workouts.</p>
+        </div>
+        <div class="body-grid" id="body-grid"></div>
+      </div>
+    </section>
+
+    <section class="visual-section visual-right" style="--photo:url('images/squat.png')">
+      <div class="section-panel reveal">
+        <div class="micro">03 / BUILD YOUR WEEK</div>
+        <h2>ONE SESSION IS GOOD.<br>A SYSTEM IS BETTER.</h2>
+        <p>Use the weekly split as a base, then swap sessions from the workout library whenever you want.</p>
+        <a class="primary-btn inline-btn" href="#split">SEE THE 7-DAY SPLIT</a>
+      </div>
+    </section>
+
+    <section class="library-shell" id="library">
+      <div class="library-head">
+        <div>
+          <div class="micro">THE WORKOUT LIBRARY</div>
+          <h2>FIND YOUR SESSION.</h2>
+        </div>
+        <div class="library-count"><strong id="result-count">18</strong><span>WORKOUTS FOUND</span></div>
+      </div>
+
+      <div class="filter-bar">
+        <label class="search-box">
+          <span>SEARCH</span>
+          <input id="search" type="search" placeholder="chest, legs, dumbbells, home...">
+        </label>
+        <label>
+          <span>GOAL</span>
+          <select id="goal">
+            <option>All</option><option>Build Muscle</option><option>Strength</option><option>Conditioning</option><option>Mobility</option>
+          </select>
+        </label>
+        <label>
+          <span>LEVEL</span>
+          <select id="level">
+            <option>All</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>All Levels</option>
+          </select>
+        </label>
+        <label>
+          <span>WHERE</span>
+          <select id="location">
+            <option>All</option><option>Gym</option><option>Home</option><option>Anywhere</option>
+          </select>
+        </label>
+        <button class="reset-btn" id="clear">RESET</button>
+      </div>
+
+      <div class="workout-grid" id="workout-grid"></div>
+      <div class="empty" id="empty" hidden>
+        <strong>NO MATCH.</strong>
+        <p>Clear a filter or search something else.</p>
       </div>
     </section>
 

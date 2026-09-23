@@ -249,11 +249,181 @@ document.querySelectorAll('.lane').forEach(b=>b.addEventListener('click',()=>{
   $('#library').scrollIntoView({behavior:'smooth'});
 }));
 $('#random-workout').addEventListener('click',()=>setDaily(randomIndex()));
-$('#random-top').addEventListener('click',()=>{const i=randomIndex();setDaily(i);openWorkout(i)});
+const randTop = $('#random-top');
+if (randTop) randTop.addEventListener('click',()=>{const i=randomIndex();setDaily(i);openWorkout(i)});
 $('#daily-open').addEventListener('click',e=>openWorkout(Number(e.currentTarget.dataset.index)));
 $('#hero-open-today').addEventListener('click',e=>openWorkout(Number(e.currentTarget.dataset.index)));
 $('#modal-close').addEventListener('click',()=>modal.close());
 modal.addEventListener('click',e=>{if(e.target===modal)modal.close()});
+
+// ==========================================
+// WORKOUT REST & INTERVAL TIMER
+// ==========================================
+let timerInterval = null;
+let timerSeconds = 60;
+let timerRunning = false;
+let timerMode = 'countdown';
+let stopwatchSeconds = 0;
+
+function formatTimerTime(totalSec) {
+  const m = Math.floor(totalSec / 60);
+  const s = totalSec % 60;
+  return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+}
+
+function playTimerChime() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(880, ctx.currentTime);
+    gain.gain.setValueAtTime(0.25, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.6);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + 0.6);
+  } catch(e) {}
+}
+
+function updateTimerDisplay() {
+  const readout = $('#timer-readout');
+  const status = $('#timer-status');
+  if (!readout) return;
+  if (timerMode === 'stopwatch') {
+    readout.textContent = formatTimerTime(stopwatchSeconds);
+    if (status) status.textContent = timerRunning ? 'STOPWATCH RUNNING' : 'STOPWATCH PAUSED';
+  } else {
+    readout.textContent = formatTimerTime(timerSeconds);
+    if (status) {
+      if (timerSeconds === 0) {
+        status.textContent = 'REST FINISHED! TIME FOR NEXT SET';
+      } else {
+        status.textContent = timerRunning ? 'REST PERIOD COUNTDOWN' : 'REST TIMER READY';
+      }
+    }
+  }
+}
+
+function startTimer() {
+  if (timerRunning) return;
+  timerRunning = true;
+  const startBtn = $('#timer-start');
+  const dispBox = $('#timer-display-box');
+  if (startBtn) {
+    startBtn.textContent = 'PAUSE';
+    startBtn.classList.add('pause');
+  }
+  if (dispBox) dispBox.classList.remove('timer-pulse');
+
+  timerInterval = setInterval(() => {
+    if (timerMode === 'stopwatch') {
+      stopwatchSeconds++;
+      updateTimerDisplay();
+    } else {
+      if (timerSeconds > 0) {
+        timerSeconds--;
+        updateTimerDisplay();
+        if (timerSeconds === 0) {
+          pauseTimer();
+          playTimerChime();
+          if (dispBox) dispBox.classList.add('timer-pulse');
+        }
+      }
+    }
+  }, 1000);
+}
+
+function pauseTimer() {
+  timerRunning = false;
+  clearInterval(timerInterval);
+  const startBtn = $('#timer-start');
+  if (startBtn) {
+    startBtn.textContent = 'START';
+    startBtn.classList.remove('pause');
+  }
+  updateTimerDisplay();
+}
+
+function resetTimer() {
+  pauseTimer();
+  const dispBox = $('#timer-display-box');
+  if (dispBox) dispBox.classList.remove('timer-pulse');
+  if (timerMode === 'stopwatch') {
+    stopwatchSeconds = 0;
+  } else {
+    const activeChip = document.querySelector('.preset-chip.active');
+    timerSeconds = activeChip ? Number(activeChip.dataset.seconds || 60) : 60;
+  }
+  updateTimerDisplay();
+}
+
+function setTimerPreset(seconds, mode = 'countdown') {
+  pauseTimer();
+  timerMode = mode;
+  const dispBox = $('#timer-display-box');
+  if (dispBox) dispBox.classList.remove('timer-pulse');
+  if (mode === 'stopwatch') {
+    stopwatchSeconds = 0;
+  } else {
+    timerSeconds = seconds;
+  }
+  document.querySelectorAll('.preset-chip').forEach(c => {
+    const chipSec = Number(c.dataset.seconds);
+    const chipMode = c.dataset.mode || 'countdown';
+    c.classList.toggle('active', chipSec === seconds && chipMode === mode);
+  });
+  updateTimerDisplay();
+}
+
+function initTimerEvents() {
+  const startBtn = $('#timer-start');
+  const resetBtn = $('#timer-reset');
+  if (startBtn) {
+    startBtn.addEventListener('click', () => {
+      if (timerRunning) pauseTimer();
+      else startTimer();
+    });
+  }
+  if (resetBtn) {
+    resetBtn.addEventListener('click', resetTimer);
+  }
+  document.querySelectorAll('.preset-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const sec = Number(chip.dataset.seconds);
+      const mode = chip.dataset.mode || 'countdown';
+      setTimerPreset(sec, mode);
+    });
+  });
+
+  // Quick-load timer from demo workouts
+  document.querySelectorAll('[data-load-timer]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const s = Number(btn.dataset.loadTimer);
+      const mode = btn.dataset.mode || 'countdown';
+      setTimerPreset(s, mode);
+      $('#timer')?.scrollIntoView({ behavior: 'smooth' });
+      startTimer();
+    });
+  });
+
+  updateTimerDisplay();
+}
+
+function initDietTabs() {
+  const tabs = document.querySelectorAll('.diet-tab-btn');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const targetId = tab.dataset.target;
+      document.querySelectorAll('.diet-plan-card').forEach(card => {
+        card.classList.toggle('active', card.id === targetId);
+      });
+    });
+  });
+}
 
 window.addEventListener('scroll',()=>{
   const max=document.documentElement.scrollHeight-window.innerHeight;
@@ -269,4 +439,6 @@ const dayOfYear=Math.floor((Date.now()-new Date(new Date().getFullYear(),0,0))/8
 applyBrandConfig();
 setDaily(dayOfYear%workouts.length);
 render();
+initTimerEvents();
+initDietTabs();
 
