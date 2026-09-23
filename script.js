@@ -33,7 +33,7 @@ function applyBrandConfig() {
   if (idMicro) idMicro.textContent = SITE_CONFIG.fullName;
 
   // Update footer copyright
-  const footerYear = document.querySelector('footer span');
+  const footerYear = document.querySelector('footer > span') || document.querySelector('footer span');
   if (footerYear) footerYear.textContent = `© ${new Date().getFullYear()} ${SITE_CONFIG.fullName}`;
 }
 
