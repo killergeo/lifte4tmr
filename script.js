@@ -62,6 +62,7 @@ const workouts = [
 
 const exerciseGuides = {
   'goblet_squat': {
+    videoId: 'lRYBbchqxtI',
     img: 'images/exercises/squat-demo.jpg',
     tip: 'Hold weight at upper chest, brace core, break at hips and knees, descend below parallel and drive through whole foot.',
     primaryTarget: 'Quads & Glutes',
@@ -77,6 +78,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Actively push knees outward against your elbows and squeeze abs like bracing for a punch before descending.'
   },
   'back_squat': {
+    videoId: 'PPmvh7gBTi0',
     img: 'images/exercises/squat-demo.jpg',
     tip: 'Bar across traps, tight upper back, brace core, descend with knees tracking toes, drive up with hips.',
     primaryTarget: 'Quadriceps, Glutes & Adductors',
@@ -92,6 +94,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Drive your upper back aggressively into the barbell and keep your eyes focused straight ahead.'
   },
   'db_bench': {
+    videoId: '1V3vpcaxRYQ',
     img: 'images/exercises/bench-demo.jpg',
     tip: 'Retract scapulae into bench, 45-degree elbow tuck, lower dumbbells to outer chest, press up and converge slightly.',
     primaryTarget: 'Pectoralis Major (Mid & Lower Chest)',
@@ -107,6 +110,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Keep wrists stacked straight above elbows and envision pulling your biceps together to contract the chest.'
   },
   'bench_press': {
+    videoId: 'hWbUlkb5Ms4',
     img: 'images/exercises/bench-demo.jpg',
     tip: 'Squeeze shoulder blades together, plant feet firm, touch lower sternum under control, drive bar up.',
     primaryTarget: 'Pectoralis Major & Triceps',
@@ -122,6 +126,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Squeeze the bar as hard as possible and push the floor away with your feet to channel leg drive into the press.'
   },
   'incline_press': {
+    videoId: '8fXfwG4ftaQ',
     img: 'images/exercises/bench-demo.jpg',
     tip: 'Set bench to 30 degrees, pack shoulders, control descent to clavicle, press up over upper chest.',
     primaryTarget: 'Clavicular Pectoralis (Upper Chest)',
@@ -137,6 +142,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Stick to a 30-degree incline and lead with your sternum high throughout the full set.'
   },
   'pushup': {
+    videoId: 'I9fsqKE5XHo',
     img: 'images/exercises/pushup-demo.jpg',
     tip: 'Body locked in rigid plank, elbows angled 45 degrees, chest to floor, drive ground away.',
     primaryTarget: 'Chest & Core',
@@ -152,6 +158,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Squeeze glutes and quads continuously and keep your chin tucked neutral to your spine.'
   },
   'db_row': {
+    videoId: 'qN54-QNO1eQ',
     img: 'images/exercises/row-demo.jpg',
     tip: 'Flat spine, pull dumbbell back toward hip pocket, pause and squeeze lat, control the stretch.',
     primaryTarget: 'Latissimus Dorsi & Rhomboids',
@@ -167,6 +174,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Think of your hand as a hook—pull with your elbow toward your waistline, not your shoulder.'
   },
   'barbell_row': {
+    videoId: 'Nqh7q3zDCoQ',
     img: 'images/exercises/row-demo.jpg',
     tip: '45-degree hip hinge, pull bar to belly button, squeeze shoulder blades together without standing up.',
     primaryTarget: 'Mid-Back, Lats & Upper Back Thickness',
@@ -182,6 +190,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Lock your torso angle in stone like a statue and only move your arms and scapulae.'
   },
   'lat_pulldown': {
+    videoId: 'bNmvKpJSWKM',
     img: 'images/exercises/pullup-demo.jpg',
     tip: 'Chest tall, drive elbows straight down into sides, squeeze lats at bottom, control eccentric stretch.',
     primaryTarget: 'Latissimus Dorsi (Back Width)',
@@ -197,6 +206,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Anchor your knees tight, keep chest pointed to the ceiling, and drive exclusively with your elbows.'
   },
   'pullup': {
+    videoId: 'OEXosPwzFdc',
     img: 'images/exercises/pullup-demo.jpg',
     tip: 'Full dead hang, engage scapulae, pull chest to bar with no swinging, lower with smooth control.',
     primaryTarget: 'Lats, Upper Back & Biceps',
@@ -212,6 +222,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Cross ankles, squeeze glutes, and perform every rep from a dead stop for real strength.'
   },
   'deadlift': {
+    videoId: 'ZaTM37cfiDs',
     img: 'images/exercises/deadlift-demo.jpg',
     tip: 'Bar over mid-foot, engage lats, push floor away with legs, lock out hips without hyperextending.',
     primaryTarget: 'Posterior Chain (Glutes, Hamstrings, Erectors)',
@@ -227,6 +238,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Squeeze your armpits shut like holding oranges to lock lats, then push the earth away.'
   },
   'rdl': {
+    videoId: 'vnEANU7BqqY',
     img: 'images/exercises/deadlift-demo.jpg',
     tip: 'Slight knee bend, push hips back like closing a door behind you, feel deep hamstring stretch, squeeze glutes to stand.',
     primaryTarget: 'Hamstrings & Gluteus Maximus',
@@ -242,6 +254,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Keep the weights skimming your shins and focus 100% on horizontal hip hinge, not vertical descent.'
   },
   'shoulder_press': {
+    videoId: 'wO0l5jW2NtQ',
     img: 'images/exercises/overhead-demo.jpg',
     tip: 'Brace abs and glutes, press dumbbells overhead in a smooth arc, lock out elbows without arching lower back.',
     primaryTarget: 'Anterior & Lateral Deltoids',
@@ -257,6 +270,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Squeeze abs and glutes hard like a plank to keep your ribs down while pressing overhead.'
   },
   'lateral_raise': {
+    videoId: 'Kl3LEzQ5Zqs',
     img: 'images/exercises/overhead-demo.jpg',
     tip: 'Slight forward lean, raise arms in scapular plane with elbows slightly bent, lead with elbows, pause at parallel.',
     primaryTarget: 'Lateral Deltoids (Shoulder Width)',
@@ -272,6 +286,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Drop the weight, keep shoulders depressed down, and imagine pouring water from pitchers at the top.'
   },
   'bicep_curl': {
+    videoId: 'iui51E31sX8',
     img: 'images/exercises/arms-demo.jpg',
     tip: 'Keep elbows pinned at sides, curl without swinging hips, squeeze peak biceps contraction, lower slowly.',
     primaryTarget: 'Biceps Brachii & Brachialis',
@@ -287,6 +302,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Glue your elbows to your side seams and lock your hips in place throughout every single rep.'
   },
   'triceps_pushdown': {
+    videoId: 'NvZKjiZ8NYc',
     img: 'images/exercises/arms-demo.jpg',
     tip: 'Lock elbows at your ribs, spread rope or push bar down until full elbow extension, control return.',
     primaryTarget: 'Triceps Brachii (All 3 Heads)',
@@ -302,6 +318,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Keep elbows stationary like door hinges—only your forearms should move.'
   },
   'plank': {
+    videoId: 'v25dawSzRTM',
     img: 'images/exercises/core-demo.jpg',
     tip: 'Straight line from heels to head, squeeze glutes and quads, brace abs like taking a punch, breathe steadily.',
     primaryTarget: 'Rectus Abdominis & Transverse Abdominis',
@@ -317,6 +334,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Squeeze your glutes together hard to lock your pelvis in neutral and breathe into your stomach.'
   },
   'lunge': {
+    videoId: 'BYe4uyGF-h4',
     img: 'images/exercises/lunge-demo.jpg',
     tip: 'Step forward into 90/90 angles, lower back knee just above floor, drive through front heel to return.',
     primaryTarget: 'Quadriceps, Glutes & Hamstrings',
@@ -332,6 +350,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Keep front knee tracking over middle toes and control the descent so the back knee gently kisses the mat.'
   },
   'bulgarian_split_squat': {
+    videoId: 'or1frhkjBDc',
     img: 'images/exercises/lunge-demo.jpg',
     tip: 'Rear foot elevated on bench, torso slightly pitched forward, descend into front quad & glute, press up.',
     primaryTarget: 'Front Quad & Gluteus Maximus',
@@ -347,6 +366,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Lean torso forward at 15 degrees to place all load on front leg hip and quad, not the rear hip flexor.'
   },
   'hip_thrust': {
+    videoId: 'pUdIL5x0fWg',
     img: 'images/exercises/deadlift-demo.jpg',
     tip: 'Upper back on bench, drive through heels, lift hips into full horizontal extension, tuck chin, squeeze glutes.',
     primaryTarget: 'Gluteus Maximus (Direct Isolation)',
@@ -362,6 +382,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Keep chin tucked against chest like holding an egg; rotate around bench pivot point only.'
   },
   'mobility': {
+    videoId: 'LIVJZZyZ2qM',
     img: 'images/exercises/mobility-demo.jpg',
     tip: 'Slow, controlled transitions synced with deep diaphragmatic breathing. Expand joint range gently.',
     primaryTarget: 'Joint Articulation & Fascial Mobility',
@@ -377,6 +398,7 @@ const exerciseGuides = {
     fix: 'Jared\'s Fix: Synchronize each motion with slow breathing—never force joint pain, expand range gently.'
   },
   'hiit': {
+    videoId: 'hZb6jTbCLeE',
     img: 'images/exercises/hiit-demo.jpg',
     tip: 'Explosive cadence, light athletic foot contact, keep core tight and maintain steady breathing rhythms.',
     primaryTarget: 'Cardiovascular Output & Anaerobic Power',
@@ -491,9 +513,37 @@ function render(){
   }).join('');
 }
 
+function toggleExerciseVideo(cardIndex){
+  const embed = modalContent.querySelector(`#video-embed-${cardIndex}`);
+  const btn = modalContent.querySelector(`.watch-video-btn[data-trigger-video="${cardIndex}"]`);
+  if (!embed) return;
+  const iframe = embed.querySelector('iframe');
+  const isHidden = embed.style.display === 'none';
+
+  if (isHidden) {
+    embed.style.display = 'block';
+    if (iframe && (!iframe.src || iframe.src === 'about:blank' || iframe.src.endsWith('/'))) {
+      iframe.src = iframe.dataset.src;
+    }
+    if (btn) {
+      btn.classList.add('active');
+      const span = btn.querySelector('span');
+      if (span) span.textContent = '✕ HIDE 4K VIDEO';
+    }
+  } else {
+    embed.style.display = 'none';
+    if (iframe) iframe.src = 'about:blank';
+    if (btn) {
+      btn.classList.remove('active');
+      const span = btn.querySelector('span');
+      if (span) span.textContent = '▶ WATCH 4K VIDEO DEMO';
+    }
+  }
+}
+
 function toggleExerciseBreakdown(cardIndex){
   const panel = modalContent.querySelector(`#breakdown-panel-${cardIndex}`);
-  const btn = modalContent.querySelector(`.watch-video-btn[data-trigger-breakdown="${cardIndex}"]`);
+  const btn = modalContent.querySelector(`.breakdown-toggle-btn[data-trigger-breakdown="${cardIndex}"]`);
   if (!panel) return;
   const isHidden = panel.style.display === 'none';
 
@@ -502,14 +552,14 @@ function toggleExerciseBreakdown(cardIndex){
     if (btn) {
       btn.classList.add('active');
       const span = btn.querySelector('span');
-      if (span) span.textContent = '✕ HIDE FORM BREAKDOWN';
+      if (span) span.textContent = '✕ HIDE FORM CUES';
     }
   } else {
     panel.style.display = 'none';
     if (btn) {
       btn.classList.remove('active');
       const span = btn.querySelector('span');
-      if (span) span.textContent = 'FORM BREAKDOWN & TEMPO';
+      if (span) span.textContent = 'FORM CUES & TEMPO';
     }
   }
 }
@@ -533,9 +583,9 @@ function openWorkout(index){
     </div>
 
     <div class="exercise-section-header">
-      <div class="micro">MOVEMENT DEMONSTRATIONS &amp; BIOMECHANICS GUIDE</div>
+      <div class="micro">4K 60FPS DEMONSTRATIONS &amp; FORM GUIDE</div>
       <h3>EXERCISES IN THIS WORKOUT</h3>
-      <p>Click "FORM BREAKDOWN &amp; TEMPO" or movement photos below to inspect 4-phase biomechanics, cadence, and Jared's form cues.</p>
+      <p>Tap "▶ WATCH 4K VIDEO DEMO" or movement photos below to watch proper execution. Tap "FORM CUES &amp; TEMPO" for phase cues.</p>
     </div>
 
     <div class="exercise-cards-list">
@@ -543,9 +593,12 @@ function openWorkout(index){
         const guide = getExerciseGuide(e[0]);
         return `
         <article class="exercise-card" id="card-${i}">
-          <div class="exercise-thumb" data-trigger-breakdown="${i}" style="background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.75)),url('${guide.img}')" title="Click to view ${esc(e[0])} form breakdown">
+          <div class="exercise-thumb" data-trigger-video="${i}" style="background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.75)),url('${guide.img}')" title="Click to watch ${esc(e[0])} 4K video demo">
             <span class="exercise-badge">MOVE #${i+1}</span>
-            <span class="thumb-tempo-tag">${esc(guide.tempo || '3-1-1-0')}</span>
+            <div class="thumb-play-overlay">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="thumb-tempo-tag">${esc(guide.tempo ? guide.tempo.split(' ')[0] : '3-1-1-0')}</span>
           </div>
           <div class="exercise-details">
             <div class="exercise-top">
@@ -562,10 +615,28 @@ function openWorkout(index){
             </div>
 
             <div class="exercise-actions">
-              <button class="watch-video-btn" data-trigger-breakdown="${i}">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                <span>FORM BREAKDOWN &amp; TEMPO</span>
+              <button class="watch-video-btn" data-trigger-video="${i}">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                <span>▶ WATCH 4K VIDEO DEMO</span>
               </button>
+              <button class="breakdown-toggle-btn" data-trigger-breakdown="${i}">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span>FORM CUES &amp; TEMPO</span>
+              </button>
+            </div>
+
+            <div class="exercise-video-embed" id="video-embed-${i}" style="display:none">
+              <div class="clean-video-wrapper">
+                <div class="video-overlay-header">
+                  <span class="video-brand-tag">LIFTE4TMR • FORM DEMONSTRATION</span>
+                  <span class="video-quality-tag">4K • 60 FPS</span>
+                </div>
+                <iframe src="" data-src="https://www.youtube-nocookie.com/embed/${guide.videoId}?autoplay=1&mute=1&controls=1&modestbranding=1&rel=0&loop=1&playlist=${guide.videoId}&iv_load_policy=3&playsinline=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="${esc(e[0])} 4K Form Demonstration"></iframe>
+              </div>
+              <div class="video-embed-controls">
+                <span class="video-cue-pill">▶ Proper Biomechanics &amp; Movement Execution</span>
+                <button class="close-video-btn" data-close-video="${i}">✕ CLOSE VIDEO</button>
+              </div>
             </div>
 
             <div class="exercise-breakdown-panel" id="breakdown-panel-${i}" style="display:none">
@@ -632,16 +703,28 @@ function openWorkout(index){
   </div>`;
 
   modalContent.onclick = e => {
-    const trigger = e.target.closest('[data-trigger-breakdown]');
-    if (trigger) {
+    const videoTrigger = e.target.closest('[data-trigger-video]');
+    if (videoTrigger) {
       e.preventDefault();
-      toggleExerciseBreakdown(trigger.dataset.triggerBreakdown);
+      toggleExerciseVideo(videoTrigger.dataset.triggerVideo);
       return;
     }
-    const closer = e.target.closest('[data-close-breakdown]');
-    if (closer) {
+    const videoCloser = e.target.closest('[data-close-video]');
+    if (videoCloser) {
       e.preventDefault();
-      toggleExerciseBreakdown(closer.dataset.closeBreakdown);
+      toggleExerciseVideo(videoCloser.dataset.closeVideo);
+      return;
+    }
+    const breakdownTrigger = e.target.closest('[data-trigger-breakdown]');
+    if (breakdownTrigger) {
+      e.preventDefault();
+      toggleExerciseBreakdown(breakdownTrigger.dataset.triggerBreakdown);
+      return;
+    }
+    const breakdownCloser = e.target.closest('[data-close-breakdown]');
+    if (breakdownCloser) {
+      e.preventDefault();
+      toggleExerciseBreakdown(breakdownCloser.dataset.closeBreakdown);
       return;
     }
   };
@@ -650,6 +733,7 @@ function openWorkout(index){
 }
 
 function closeWorkoutModal(){
+  modal.querySelectorAll('iframe').forEach(f => f.src = 'about:blank');
   modal.close();
 }
 
