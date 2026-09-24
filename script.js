@@ -729,12 +729,26 @@ function openWorkout(index){
     }
   };
 
-  modal.showModal();
+  if (typeof modal.showModal === 'function') {
+    if (!modal.open) {
+      modal.showModal();
+    }
+  } else {
+    modal.setAttribute('open', '');
+  }
+  document.body.style.overflow = 'hidden';
 }
 
 function closeWorkoutModal(){
   modal.querySelectorAll('iframe').forEach(f => f.src = 'about:blank');
-  modal.close();
+  if (typeof modal.close === 'function') {
+    if (modal.open) {
+      modal.close();
+    }
+  } else {
+    modal.removeAttribute('open');
+  }
+  document.body.style.overflow = '';
 }
 
 $('#modal-close').addEventListener('click', closeWorkoutModal);

@@ -146,9 +146,9 @@ footer p{margin:0}
 .footer-contacts{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
 .footer-link{display:flex;align-items:center;gap:7px;color:#9aa5b1;font-size:.8rem;transition:color .2s}
 .footer-link:hover{color:var(--acid)}
-dialog{width:min(980px,94vw);max-height:88vh;background:#0a0d11;color:#fff;border:1px solid rgba(255,255,255,.14);padding:0;box-shadow:0 40px 120px rgba(0,0,0,.6)}
+dialog{width:min(980px,94vw);max-height:88vh;background:#0a0d11;color:#fff;border:1px solid rgba(255,255,255,.14);padding:0;box-shadow:0 40px 120px rgba(0,0,0,.6);overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
 dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(4px)}
-.modal-close{position:sticky;top:0;float:right;z-index:3;width:48px;height:48px;border:0;background:var(--acid);color:#0a0c0d;font-size:1.5rem;font-weight:1000;cursor:pointer}
+.modal-close{position:sticky;top:0;float:right;z-index:10;width:48px;height:48px;border:0;background:var(--acid);color:#0a0c0d;font-size:1.5rem;font-weight:1000;cursor:pointer}
 .modal-banner{padding:36px 40px;background-size:cover;background-position:center;border-bottom:1px solid var(--line);position:relative}
 .modal-banner::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,13,17,.95) 0%,rgba(10,13,17,.82) 55%,rgba(10,13,17,.55) 100%)}
 .modal-banner>*{position:relative;z-index:2}
@@ -364,7 +364,8 @@ section[id]{scroll-margin-top:0}
   .exercise-card{grid-template-columns:1fr}
   .exercise-thumb{min-height:160px;border-right:0;border-bottom:1px solid var(--line)}
   .exercise-details{padding:16px}
-  .modal-banner{padding:26px 20px}
-  .modal-wrap{padding:20px}
+  dialog{width:96vw;max-height:92vh;margin:auto}
+  .modal-banner{padding:22px 18px}
+  .modal-wrap{padding:16px 14px 24px}
   .modal-stats{grid-template-columns:1fr 1fr}
 }
